@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Program {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int number = (int)scanner;
+        int number = scanner.nextInt();
 
         if (number <= 1) {
             System.err.println("IllegalArgument");
