@@ -5,7 +5,7 @@ public class Program {
         Scanner sc = new Scanner(System.in);
 
         int week = 1;
-        int storage = 0; 
+        long storage = 0; // stores all min grades
         int countWeeks = 0;
 
         while (true) {
@@ -47,15 +47,15 @@ public class Program {
         printResult(storage, countWeeks);
     }
 
-    public static void printResult(int storage, int weeks) {
-        int divisor = 1;
+    public static void printResult(long storage, int weeks) {
+        long divisor = 1;
 
         // get divisor like 1000 for 4 digits
         for (int i = 1; i < weeks; i++)
             divisor *= 10;
 
         for (int i = 1; i <= weeks; i++) {
-            int digit = storage / divisor;
+            int digit = (int)(storage / divisor);
 
             System.out.print("Week " + i + " ");
 
