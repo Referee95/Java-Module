@@ -36,7 +36,7 @@ public class Program {
                     min = grade;
             }
 
-            storage = storage * 10 + min;
+            storage *= 10 + min;
             week++;
             countWeeks++;
 
