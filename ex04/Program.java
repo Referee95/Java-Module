@@ -38,7 +38,7 @@ public class Program {
             }
         }
 
-        Find max frequency
+        // Find max frequency
         int max = topFreq[0];
 
         // Scale to max height = 10
