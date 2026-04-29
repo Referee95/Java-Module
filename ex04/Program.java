@@ -5,11 +5,12 @@ public class Program {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
 
+        char[] arr = input.toCharArray();
         int[] freq = new int[65536]; // Unicode BMP
 
         // Count frequencies (ONE PASS)
-        for (int i = 0; i < input.length(); i++) {
-            char c = input.charAt(i);
+        for (int i = 0; i < arr.length; i++) {
+            char c = arr[i];
             if (freq[c] < 999)
                 freq[c]++;
         }
