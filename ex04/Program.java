@@ -9,7 +9,9 @@ public class Program {
 
         // Count frequencies (ONE PASS)
         for (int i = 0; i < input.length(); i++) {
-            freq[input.charAt(i)]++;
+            char c = input.charAt(i);
+            if (freq[c] < 999)
+                freq[c]++;
         }
 
         // Find top 10 characters
