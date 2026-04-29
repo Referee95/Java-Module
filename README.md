@@ -1,2 +1,2 @@
 just learning
-but bdit kanhmaaq naaaa     
+but bdit kanhmaaqaaaaaaaaaa     
