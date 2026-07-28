@@ -6,7 +6,7 @@ public class Program {
         int coffeeCount = 0;
         
         while (true) {
-             System.out.print("-> ");
+            System.out.print("-> ");
             int number = scanner.nextInt();
             if (number == 42) {
                 break;
