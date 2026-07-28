@@ -6,16 +6,14 @@ public class Program {
         String input = scanner.nextLine();
 
         char[] arr = input.toCharArray();
-        int[] freq = new int[65536]; // Unicode BMP
+        int[] freq = new int[65536]; 
 
-        // Count frequencies (ONE PASS)
         for (int i = 0; i < arr.length; i++) {
             char c = arr[i];
             if (freq[c] < 999)
                 freq[c]++;
         }
 
-        // Find top 10 characters
         char[] topChars = new char[10];
         int[] topFreq = new int[10];
 
@@ -28,7 +26,7 @@ public class Program {
                 if (count > topFreq[j] ||
                    (count == topFreq[j] && i < topChars[j])) {
 
-                    // shift right
+
                     for (int k = 9; k > j; k--) {
                         topFreq[k] = topFreq[k - 1];
                         topChars[k] = topChars[k - 1];
@@ -41,17 +39,14 @@ public class Program {
             }
         }
 
-        // Find max frequency
         int max = topFreq[0];
-
-        // Scale to max height = 10
         int[] heights = new int[10];
+
         for (int i = 0; i < 10; i++) {
             if (topFreq[i] > 0)
-                heights[i] = (topFreq[i] * 10 + max - 1) / max; // ceil
+                heights[i] = (topFreq[i] * 10 + max - 1) / max; 
         }
 
-        // Print histogram
         for (int level = 10; level > 0; level--) {
             for (int i = 0; i < 10; i++) {
                 if (heights[i] >= level) {
@@ -66,7 +61,6 @@ public class Program {
             System.out.println();
         }
 
-        // Print characters
         for (int i = 0; i < 10; i++) {
             if (topFreq[i] > 0)
                 System.out.print(topChars[i] + "\t");
